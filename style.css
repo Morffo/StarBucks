@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    
+} 
+html {
+    overflow-x: hidden;
+
+}
+
+body {
+    font-family: "Montserrat", serif;
+    background-color: #121517;
+    color: #D9D9D9;
+    font-size: 20px;
+    line-height: 163%;
+    letter-spacing: -0.02em;
+
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2 {
+    font-weight: 800;
+    margin: 0;
+}
+
+.header {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+    
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 37px;
+    line-height: 109%;
+    letter-spacing: -0.03em;
+}
+
+.text-gradient {
+    background: linear-gradient(223deg, #237249 0%, #35c66b 100%);
+    background-clip: text;
+    -webkit-background-clip-: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header__nav {
+    display: flex;
+    gap: 95px;
+    margin-top: 10px;
+
+}
+
+.header .container {
+    display: flex;
+    align-items: center; /* Если center не особо помог */
+    gap: 95px;
+}
+
+.header__link {
+    font-size: 19px;
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+a {
+    color: #D9D9D9;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.welcome {
+    margin-top: 30px;
+}
+
+.container {
+
+}
+
+.welcome .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 78px;
+    line-height: 109%;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.title span {
+    background: linear-gradient(223deg, #237249 0%, #35c66b 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome__title {
+    margin-bottom: 55px;
+    position: relative;
+}
+
+.welcome__title::before {
+    position: absolute;
+    
+    content: ""; /* Псевдоэлемент не появится без content */
+    display: block;
+    z-index: -5;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    filter: blur(90px);
+    left: 40px;
+    top: 80px;
+}
+
+.welcome__text {
+    margin-bottom: 55px;
+}
+
+.welcome__btns-wrapper {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 54px;
+}
+
+.btn {
+    display: inline-block; /* у нас ведь btn это a */
+    border-radius: 83px;
+    padding: 20px 80px;
+    background: linear-gradient(210deg, #237249 0%, #35c66b 100%);
+    font-weight: 639;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    color: #fff;
+    text-align: center;
+}
+
+.link {
+    background: #121517;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 146%;
+    letter-spacing: -0.03em;
+    color: #d9d9d9;
+    border: 1.02px solid #dadada;
+    border-radius: 83px;
+    padding: 20px 55px;
+}
+
+.stats {
+    display: flex;
+    gap: 45px;
+}
+
+.stats__item {
+    width: 126px;
+    line-height: 144%;
+}
+
+.stats__num {
+    font-size: 62px;
+    letter-spacing: -0.03px;
+    color: #fff;
+}
+
+.stats__num::after {
+    content: "+";
+    background: linear-gradient(244deg, #237249 0%, #35c66b 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome__img-wrapper {
+    padding-right: 65px;
+    position: relative;
+}
+
+.welcome__img {
+    width: 468px;
+}
+
+.welcome__img-wrapper::before {
+    content: "";
+    position: absolute;
+    right: -230px;
+    bottom: -240px;
+    bottom: 10px;
+    background-image: url("./images/icons/lines.svg");
+    background-size: contain;
+    background-position: center;
+    width: 860px;
+    height: 620px;
+    z-index: -10;
+    background-repeat: no-repeat;
+}
+
+
+.welcome__img-wrapper::after {
+    position: absolute;
+    
+    content: ""; /* Псевдоэлемент не появится без content */
+    z-index: -5;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    filter: blur(90px);
+    right: 100px;
+    bottom: 60px;
+}
+
+.welcome__desc {
+    max-width: 574px;
+}
