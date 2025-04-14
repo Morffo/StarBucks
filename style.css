@@ -37,6 +37,7 @@ h1, h2 {
 }
 
 .container {
+    width: 100%;
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 15px;
@@ -250,7 +251,23 @@ a:hover {
     padding-top: 55px;
     padding-bottom: 25px;
     border-radius: 46px;
+    position: relative;
 
+}
+
+.benefits__container::before {
+    position: absolute;
+    
+    content: ""; /* Псевдоэлемент не появится без content */
+    display: block;
+    z-index: -5;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    filter: blur(100px);
+    left: -30px;
+    top: 10px;
 }
 
 .benefits__item {
@@ -263,6 +280,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .benefits__img-wrapper::before {
@@ -293,6 +311,7 @@ a:hover {
     font-size: 32px;
     color: #121517;
     text-align: center;
+    margin-bottom: 17px;
 }
 
 .benefits__desc {
@@ -320,4 +339,91 @@ a:hover {
     width: 210px;
     top: calc(50% + 7px);
     left: calc(50% - 5px);
+}
+
+.history {
+    margin-top: 135px;
+}
+
+.history .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.history__img-wrapper {
+    position: relative;
+}
+
+.history__img-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #237249;
+    top: 25px;
+    left: -35px;
+    clip-path: polygon(67% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+
+}
+
+
+.history__img {
+    width: 465px;
+    clip-path: polygon(67% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+    box-shadow: -14px 26px 65px 0 rgba(0, 0, 0, 0.39)
+
+}
+
+.history__text {
+    max-width: 460px;
+    position: relative;
+}
+
+.history__text::before {
+    content: "";
+    width: 920px;
+    height: 670px;
+    z-index: -10;
+
+    position: absolute;
+    right: -145px;
+    bottom: -290px;
+
+    background-image: url("./images/icons/lines.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: rotate(37deg);
+
+}
+
+.history__title {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.history__title::before {
+    position: absolute;
+    
+    content: ""; /* Псевдоэлемент не появится без content */
+    display: block;
+    z-index: -5;
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    filter: blur(90px);
+    left: 180px;
+    top: 10px;
+}
+
+.history__desc {
+    margin-bottom: 60px;
+    
+}
+
+.history__pic {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 23%, 11% 0);
 }
